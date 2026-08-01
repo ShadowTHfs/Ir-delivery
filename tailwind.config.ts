@@ -14,10 +14,12 @@ const config: Config = {
         verde: "#3FA34D", // Verde Mandioca — ações primárias
         azul: "#0E5AA7", // Azul Irará — navegação/foco/confiança
         terracota: "#C66A3D", // Terracota Cerâmica — destaques e selos
+        sorvete: "#D6558C", // rosa usado só no ícone da categoria Sorveterias
+        petshop: "#6B4226", // marrom usado só no ícone da categoria Pet Shops
       },
       fontFamily: {
-        display: ["var(--font-jakarta)", "sans-serif"],
-        body: ["var(--font-jakarta)", "sans-serif"],
+        display: ["var(--font-poppins)", "sans-serif"],
+        body: ["var(--font-manrope)", "sans-serif"],
       },
     },
   },

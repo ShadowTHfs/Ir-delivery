@@ -11,7 +11,9 @@ os dados são estáticos (mock), sem banco de dados ou APIs externas.
 - **Paleta:** Verde Mandioca `#3FA34D` (ações), Azul Irará `#0E5AA7`
   (navegação/confiança), Creme Farinha `#F5EBD7` (fundo), Terracota Cerâmica
   `#C66A3D` (destaques) e Grafite `#2D2D2D` (texto/interface).
-- **Tipografia:** Plus Jakarta Sans.
+- **Tipografia:** Poppins (títulos) e Manrope (texto), conforme o manual de marca.
+- **Categorias:** Restaurantes, Sorveterias, Farmácias, Mercados, Bebidas, Pet Shops
+  e Outros — cada uma com ícone e cor próprios, usadas para filtrar a home do cliente.
 - Interface inspirada em iFood, Uber Eats, Airbnb e Apple: bastante espaço em
   branco, cards limpos, categorias retas (sem elementos "tortos").
 
@@ -78,10 +80,13 @@ app/
   cliente/page.tsx             # área do cliente: lista → estabelecimento → carrinho → checkout
   estabelecimento/page.tsx      # área do estabelecimento: pedidos + catálogo
   entregador/page.tsx            # área do entregador: entregas + ganhos
-  globals.css                     # Tailwind + fonte (Plus Jakarta Sans)
+  globals.css                     # Tailwind + fontes (Poppins / Manrope)
 components/
   AreaSwitcher.tsx                # barra para alternar entre áreas + sair
+  Logo.tsx                          # ícone da moto + wordmark IRÁ (manual de marca)
   Header.tsx                       # logo IRÁ, busca e ícone do carrinho
+  CategoryGrid.tsx                  # grade de categorias (ícone + cor) usada na home
+  BottomNav.tsx                      # navegação inferior mobile (Início/Buscar/...)
   EstablishmentCard.tsx             # card da lista de estabelecimentos
   EstablishmentBanner.tsx            # banner + info do estabelecimento
   EstablishmentPage.tsx               # composição: banner + categorias + produtos
@@ -100,6 +105,7 @@ components/
 lib/
   types.ts                                        # tipos (Establishment, Product, Order...)
   mock-data.ts                                     # estabelecimentos, catálogos, pedidos, entregador
+  categories.ts                                     # categorias (ícone + cor) do manual de marca
   utils.ts                                          # cn() e formatação de moeda (currency)
 ```
 
